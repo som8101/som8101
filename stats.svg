@@ -55,21 +55,29 @@
         <text class="title" x="25" y="35">Somnath Gorai's GitHub Stats</text>
 
         <!-- Stats Rows -->
-        <g class="row r1" transform="translate(25, 65)">
-            <text class="stat-text" y="10">Total Stars Earned:</text>
-            <text class="stat-val" x="150" y="10">1337</text>
+        <g transform="translate(25, 65)">
+            <g class="row r1">
+                <text class="stat-text" y="10">Total Stars Earned:</text>
+                <text class="stat-val" x="150" y="10">1337</text>
+            </g>
         </g>
-        <g class="row r2" transform="translate(25, 95)">
-            <text class="stat-text" y="10">Total Commits (2026):</text>
-            <text class="stat-val" x="150" y="10">4200</text>
+        <g transform="translate(25, 95)">
+            <g class="row r2">
+                <text class="stat-text" y="10">Total Commits (2026):</text>
+                <text class="stat-val" x="150" y="10">4200</text>
+            </g>
         </g>
-        <g class="row r3" transform="translate(25, 125)">
-            <text class="stat-text" y="10">Total PRs:</text>
-            <text class="stat-val" x="150" y="10">150</text>
+        <g transform="translate(25, 125)">
+            <g class="row r3">
+                <text class="stat-text" y="10">Total PRs:</text>
+                <text class="stat-val" x="150" y="10">150</text>
+            </g>
         </g>
-        <g class="row r4" transform="translate(25, 155)">
-            <text class="stat-text" y="10">Total Issues:</text>
-            <text class="stat-val" x="150" y="10">84</text>
+        <g transform="translate(25, 155)">
+            <g class="row r4">
+                <text class="stat-text" y="10">Total Issues:</text>
+                <text class="stat-val" x="150" y="10">84</text>
+            </g>
         </g>
 
         <!-- Rank -->
