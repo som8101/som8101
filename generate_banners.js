@@ -201,7 +201,7 @@ const createBanner = (isDark) => {
         <!-- Tagline Box -->
         <g transform="translate(50, 450)">
             <rect width="500" height="80" fill="${terminalBg}" rx="15" stroke="${isDark ? '#30363d' : '#d0d7de'}" stroke-width="2"/>
-            <image href="https://raw.githubusercontent.com/som8101/som8101/main/logo.png" x="15" y="15" width="50" height="50" />
+            <image href="data:image/png;base64,${data.logoBase64}" x="15" y="15" width="50" height="50" />
             <text x="80" y="45" class="text" font-style="italic" font-size="18">"Ab mya itna vi khas nahi"</text>
         </g>
 
@@ -239,7 +239,7 @@ const createBanner = (isDark) => {
         <!-- clipped with a height-growing rect first, then scanner line passes over -->
         <g clip-path="url(#hologramClip)">
             <g clip-path="url(#scannerClip)">
-                <image href="https://raw.githubusercontent.com/som8101/som8101/main/avatar.png" x="800" y="150" width="450" height="600" preserveAspectRatio="xMidYMax meet" />
+                <image href="data:image/png;base64,${data.userImageBase64}" x="800" y="150" width="450" height="600" preserveAspectRatio="xMidYMax meet" />
             </g>
         </g>
         <!-- Scanner Line -->

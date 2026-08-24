@@ -87,7 +87,7 @@ const createLanyard = () => {
                 <circle cx="100" cy="90" r="62" fill="none" stroke="#ff007f" stroke-width="3" />
                 
                 <!-- Avatar Image -->
-                <image href="https://raw.githubusercontent.com/som8101/som8101/main/avatar.png" x="40" y="30" width="120" height="120" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice" />
+                <image href="data:image/png;base64,${data.userImageBase64}" x="40" y="30" width="120" height="120" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice" />
                 
                 <!-- Info -->
                 <text x="100" y="185" class="text" font-size="20" font-weight="bold">Somnath Gorai</text>
