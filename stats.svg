@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="195" viewBox="0 0 450 195">
+        <style>
+            .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1; }
+            .title { font-family: 'Segoe UI', sans-serif; font-size: 18px; font-weight: bold; fill: #c9d1d9; }
+            .stat-text { font-family: 'Segoe UI', sans-serif; font-size: 14px; fill: #c9d1d9; font-weight: 600; }
+            .stat-val { font-family: 'Segoe UI', sans-serif; font-size: 14px; fill: #c9d1d9; font-weight: bold; }
+            
+            .rank-circle-bg { fill: none; stroke: #21262d; stroke-width: 8; }
+            .rank-circle {
+                fill: none;
+                stroke: url(#gradient);
+                stroke-width: 8;
+                stroke-dasharray: 251;
+                stroke-dashoffset: 251;
+                animation: drawRank 2s ease-out forwards;
+                animation-delay: 0.5s;
+                transform: rotate(-90deg);
+                transform-origin: 360px 95px;
+            }
+            .rank-text {
+                font-family: 'Segoe UI', sans-serif;
+                font-size: 36px;
+                font-weight: bold;
+                fill: #ff007f;
+                opacity: 0;
+                animation: fadeIn 0.5s forwards 1.5s;
+            }
+
+            .row {
+                opacity: 0;
+                animation: slideIn 0.5s forwards;
+            }
+            .r1 { animation-delay: 0.2s; }
+            .r2 { animation-delay: 0.4s; }
+            .r3 { animation-delay: 0.6s; }
+            .r4 { animation-delay: 0.8s; }
+
+            @keyframes slideIn {
+                from { opacity: 0; transform: translateX(-20px); }
+                to { opacity: 1; transform: translateX(0); }
+            }
+            @keyframes drawRank {
+                to { stroke-dashoffset: 50; } /* 80% full */
+            }
+            @keyframes fadeIn { to { opacity: 1; } }
+        </style>
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff007f"/>
+                <stop offset="100%" stop-color="#7f00ff"/>
+            </linearGradient>
+        </defs>
+
+        <rect class="bg" width="448" height="193" x="1" y="1" rx="10" />
+        <text class="title" x="25" y="35">Somnath Gorai's GitHub Stats</text>
+
+        <!-- Stats Rows -->
+        <g class="row r1" transform="translate(25, 65)">
+            <text class="stat-text" y="10">Total Stars Earned:</text>
+            <text class="stat-val" x="150" y="10">1337</text>
+        </g>
+        <g class="row r2" transform="translate(25, 95)">
+            <text class="stat-text" y="10">Total Commits (2026):</text>
+            <text class="stat-val" x="150" y="10">4200</text>
+        </g>
+        <g class="row r3" transform="translate(25, 125)">
+            <text class="stat-text" y="10">Total PRs:</text>
+            <text class="stat-val" x="150" y="10">150</text>
+        </g>
+        <g class="row r4" transform="translate(25, 155)">
+            <text class="stat-text" y="10">Total Issues:</text>
+            <text class="stat-val" x="150" y="10">84</text>
+        </g>
+
+        <!-- Rank -->
+        <circle class="rank-circle-bg" cx="360" cy="95" r="40" />
+        <circle class="rank-circle" cx="360" cy="95" r="40" stroke-linecap="round" />
+        <text class="rank-text" x="360" y="108" text-anchor="middle">S</text>
+    </svg>

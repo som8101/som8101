@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="195" viewBox="0 0 300 195">
+        <style>
+            .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1; }
+            .title { font-family: 'Segoe UI', sans-serif; font-size: 16px; font-weight: bold; fill: #c9d1d9; }
+            .lang-text { font-family: 'Segoe UI', sans-serif; font-size: 12px; fill: #c9d1d9; font-weight: 600; }
+            .lang-perc { font-family: 'Segoe UI', sans-serif; font-size: 12px; fill: #8b949e; }
+            
+            .bar-bg { fill: #21262d; rx: 4; }
+            .bar { rx: 4; transform-origin: left; animation: scaleX 1s ease-out forwards; transform: scaleX(0); }
+            
+            @keyframes scaleX { to { transform: scaleX(1); } }
+            
+            .b1 { fill: #3178c6; animation-delay: 0.2s; }
+            .b2 { fill: #f1e05a; animation-delay: 0.4s; }
+            .b3 { fill: #e34c26; animation-delay: 0.6s; }
+            .b4 { fill: #563d7c; animation-delay: 0.8s; }
+            .b5 { fill: #b07219; animation-delay: 1.0s; }
+        </style>
+        <rect class="bg" width="298" height="193" x="1" y="1" rx="10" />
+        <text class="title" x="25" y="30">Most Used Languages</text>
+
+        <g transform="translate(25, 55)">
+            <text class="lang-text" y="0">TypeScript</text><text class="lang-perc" x="220" y="0">45%</text>
+            <rect class="bar-bg" y="8" width="250" height="8" />
+            <rect class="bar b1" y="8" width="112.5" height="8" />
+        </g>
+        <g transform="translate(25, 85)">
+            <text class="lang-text" y="0">JavaScript</text><text class="lang-perc" x="220" y="0">25%</text>
+            <rect class="bar-bg" y="8" width="250" height="8" />
+            <rect class="bar b2" y="8" width="62.5" height="8" />
+        </g>
+        <g transform="translate(25, 115)">
+            <text class="lang-text" y="0">HTML/CSS</text><text class="lang-perc" x="220" y="0">15%</text>
+            <rect class="bar-bg" y="8" width="250" height="8" />
+            <rect class="bar b3" y="8" width="37.5" height="8" />
+        </g>
+        <g transform="translate(25, 145)">
+            <text class="lang-text" y="0">CSS</text><text class="lang-perc" x="220" y="0">10%</text>
+            <rect class="bar-bg" y="8" width="250" height="8" />
+            <rect class="bar b4" y="8" width="25" height="8" />
+        </g>
+        <g transform="translate(25, 175)">
+            <text class="lang-text" y="0">Java</text><text class="lang-perc" x="220" y="0">5%</text>
+            <rect class="bar-bg" y="8" width="250" height="8" />
+            <rect class="bar b5" y="8" width="12.5" height="8" />
+        </g>
+    </svg>

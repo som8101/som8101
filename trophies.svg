@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
+        <defs>
+            <linearGradient id="shine" x1="0%" y1="0%" x2="200%" y2="200%">
+                <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+                <stop offset="45%" stop-color="rgba(255,255,255,0)" />
+                <stop offset="50%" stop-color="rgba(255,255,255,0.4)" />
+                <stop offset="55%" stop-color="rgba(255,255,255,0)" />
+                <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                <animate attributeName="x1" values="-200%;200%" dur="3s" repeatCount="indefinite" />
+                <animate attributeName="x2" values="0%;400%" dur="3s" repeatCount="indefinite" />
+            </linearGradient>
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+        <style>
+            .bg { fill: transparent; }
+            .cell {
+                fill: #161b22;
+                stroke: #30363d;
+                stroke-width: 1;
+                transform: scale(0);
+                transform-origin: center;
+                animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            }
+            .t1 { animation-delay: 0.1s; transform-origin: 90px 100px; }
+            .t2 { animation-delay: 0.3s; transform-origin: 270px 100px; }
+            .t3 { animation-delay: 0.5s; transform-origin: 450px 100px; }
+            .t4 { animation-delay: 0.7s; transform-origin: 630px 100px; }
+            .t5 { animation-delay: 0.9s; transform-origin: 810px 100px; }
+            
+            .trophy-title { font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; fill: #c9d1d9; text-anchor: middle; opacity: 0; animation: fadeIn 0.5s forwards 1.2s; }
+            .trophy-rank { font-family: 'Segoe UI', sans-serif; font-size: 32px; font-weight: 900; text-anchor: middle; opacity: 0; animation: fadeIn 0.5s forwards 1.2s; filter: url(#glow); }
+            
+            .rank-S { fill: #ff007f; }
+            .rank-A { fill: #00ffcc; }
+            .rank-B { fill: #ffd700; }
+            
+            @keyframes popIn { to { transform: scale(1); } }
+            @keyframes fadeIn { to { opacity: 1; } }
+        </style>
+
+        <rect class="bg" width="900" height="200" />
+        
+        <g class="t1">
+            <rect class="cell" x="10" y="25" width="160" height="150" rx="10" />
+            <text class="trophy-title" x="90" y="60">Multi-Language</text>
+            <text class="trophy-rank rank-S" x="90" y="115">S</text>
+            <rect x="10" y="25" width="160" height="150" rx="10" fill="url(#shine)" pointer-events="none" style="clip-path: inset(0 0 0 0 round 10px);" />
+        </g>
+        
+        <g class="t2">
+            <rect class="cell" x="190" y="25" width="160" height="150" rx="10" />
+            <text class="trophy-title" x="270" y="60">Super Star</text>
+            <text class="trophy-rank rank-A" x="270" y="115">A</text>
+            <rect x="190" y="25" width="160" height="150" rx="10" fill="url(#shine)" pointer-events="none" style="clip-path: inset(0 0 0 0 round 10px);" />
+        </g>
+
+        <g class="t3">
+            <rect class="cell" x="370" y="25" width="160" height="150" rx="10" />
+            <text class="trophy-title" x="450" y="60">Commits</text>
+            <text class="trophy-rank rank-S" x="450" y="115">S</text>
+            <rect x="370" y="25" width="160" height="150" rx="10" fill="url(#shine)" pointer-events="none" style="clip-path: inset(0 0 0 0 round 10px);" />
+        </g>
+        
+        <g class="t4">
+            <rect class="cell" x="550" y="25" width="160" height="150" rx="10" />
+            <text class="trophy-title" x="630" y="60">Issues</text>
+            <text class="trophy-rank rank-B" x="630" y="115">B</text>
+            <rect x="550" y="25" width="160" height="150" rx="10" fill="url(#shine)" pointer-events="none" style="clip-path: inset(0 0 0 0 round 10px);" />
+        </g>
+
+        <g class="t5">
+            <rect class="cell" x="730" y="25" width="160" height="150" rx="10" />
+            <text class="trophy-title" x="810" y="60">Pull Requests</text>
+            <text class="trophy-rank rank-A" x="810" y="115">A</text>
+            <rect x="730" y="25" width="160" height="150" rx="10" fill="url(#shine)" pointer-events="none" style="clip-path: inset(0 0 0 0 round 10px);" />
+        </g>
+    </svg>
